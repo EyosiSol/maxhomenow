@@ -341,7 +341,7 @@ body {
   font-weight: 550;
 }
 #learn-more {
-  background-color: var(--color-blue);
+  background-color: var(--color-blue) opacity(0.8);
 }
 #talk {
   background-color: #c10000;
@@ -349,11 +349,15 @@ body {
 
 .steps {
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 32% 68%;
   align-items: center;
   justify-content: space-between;
-  height: 720px;
-  background: white;
+  height: 760px;
+  background: linear-gradient(
+    to right,
+    var(--color-lightBlue) 20%,
+    var(--color-lightBlue) 100%
+  );
   overflow: hidden;
   position: relative;
   clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0 100%);
@@ -363,7 +367,6 @@ body {
   background: url("image/bg-steps.webp") center/cover;
   background-size: cover;
   position: relative;
-  border: 1px solid beige;
   height: 100%;
 }
 .steps-image::after {
@@ -375,7 +378,7 @@ body {
   height: 100%;
   background: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0) 30%,
     var(--color-lightBlue) 100%
   );
   overflow: hidden;
@@ -383,14 +386,20 @@ body {
 
 .steps-content {
   padding: 50px;
-  background: var(--color-lightBlue);
+  /* background: var(--color-lightBlue); */
+  background: transparent;
   z-index: 1;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
 }
 
 .steps-tag-line {
   color: #0088cc;
-  font-size: 1rem;
+  font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-weight: bold;
@@ -398,9 +407,10 @@ body {
 
 .steps-title {
   color: #003366;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  font-size: 40px;
+  line-height: 1;
   font-weight: bold;
+  margin-bottom: 32px;
   overflow: hidden;
 }
 
@@ -409,8 +419,36 @@ body {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
 }
-
+.a-step {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+  justify-self: center;
+  align-items: center;
+}
+.a-step .step-title {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  color: #117cc2;
+  justify-content: center;
+  gap: 6px;
+}
+.a-step .step-head {
+  color: #0b2f50;
+  font-size: 18px;
+  font-weight: 700;
+}
+.a-step .step-description {
+  color: #4a4a4a;
+  font-size: 14px;
+  text-align: center;
+}
 @media (max-width: 768px) {
   .mid {
     flex-direction: column;
