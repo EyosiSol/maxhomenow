@@ -449,6 +449,37 @@ body {
   font-size: 14px;
   text-align: center;
 }
+.customers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 640px;
+  background: linear-gradient(
+    to top,
+    var(--color-lightBlue) 20%,
+    transparent 100%
+  );
+  clip-path: polygon(
+    0 20%,
+    50% 10%,
+    100% 0,
+    100% 50%,
+    100% 100%,
+    50% 80%,
+    0 100%
+  );
+}
+
+.customers-title h1 {
+  font-size: 2.5rem;
+  color: #003366;
+  font-weight: bold;
+}
+.customers-title p {
+  color: var(--color-blue);
+  font-size: 1.1rem;
+}
 @media (max-width: 768px) {
   .mid {
     flex-direction: column;
