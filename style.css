@@ -571,20 +571,20 @@ body {
   clip-path: polygon(55% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
   padding-top: 15%;
   padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
 }
 .galleries .header {
-  padding: 2rem 0;
   background: #003366;
-  /* text-align: center; */
   width: 100%;
-  padding: 0px 100px;
+  padding: 0px 80px;
 }
 .galleries .header-title {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-self: start;
-  gap: 0px;
 }
 .galleries .header .header-small {
   color: #4a9fe8;
@@ -597,7 +597,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
 .galleries .header .title {
@@ -628,14 +627,14 @@ body {
 }
 
 .gallery {
-  padding: 0px 100px;
+  padding: 0px 80px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding-top: 3%;
+  /* padding-top: 3%; */
 }
 
 .gallery-item {
@@ -655,6 +654,354 @@ body {
   transform: scale(1.05);
 }
 
+.financing {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding-right: 20px;
+  align-items: center;
+  /* justify-content:  */
+  height: 720px;
+  background: var(--color-primary);
+  overflow: hidden;
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 0 100%);
+}
+
+.financing-image {
+  background: url("image/Home.webp") center/cover;
+  background-size: cover;
+  position: relative;
+  /* border: 1px solid beige;    */
+  height: 100%;
+}
+.financing-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px; /* Adjust to smoothen transition */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 20%,
+    var(--color-primary) 90%
+  );
+  overflow: hidden;
+}
+
+.financing-content {
+  background: transparent;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+}
+.circle-wrapper1,
+.circle-wrapper2,
+.circle-wrapper3 {
+  padding: 30px;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+.circle-content {
+  padding: 50px;
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 0 100%);
+}
+
+.diagonal-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.text-section {
+  width: 48%;
+  background-color: #0b2640;
+  padding: 40px;
+  color: white;
+  z-index: 2;
+}
+
+.image-section {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-image: url("/image/bg-steps.webp");
+  background-size: cover;
+  background-position: center;
+}
+.image-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #0b2640 70%);
+  overflow: hidden;
+}
+
+.promo-circle {
+  position: absolute;
+  right: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  z-index: 3;
+}
+
+.text-content {
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.interest-rate {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.interest-text,
+.get {
+  font-size: 1.2em;
+  text-align: center;
+}
+.maximize {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  align-items: center;
+  justify-content: space-between;
+  height: 580px;
+  background: #dae8f3;
+  overflow: hidden;
+  position: relative;
+  clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0 100%);
+  padding-right: 120px;
+}
+.maximize-image {
+  background: url("image/maximize.webp") center/cover;
+  background-size: cover;
+  position: relative;
+  border: 1px solid beige;
+  height: 100%;
+}
+.maximize-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px; /* Adjust to smoothen transition */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 25%,
+    #dae8f3 100%
+  );
+  overflow: hidden;
+}
+.maximize-content {
+  padding: 50px;
+  background: transparent;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+}
+.maximize-tag-line {
+  color: #117cc2;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.maximize-title {
+  color: #003366;
+  line-height: 1.2;
+  font-size: 36px;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+.maximize-description {
+  color: #3a5369;
+  font-size: 1.1rem;
+  font-weight: 600;
+  overflow: hidden;
+}
+.maximize-additional-info {
+  color: #4a4a4a;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.community {
+  display: grid;
+  grid-template-columns: 50% 45%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  height: 720px;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("image/bg-options.jpg") center/cover;
+  gap: 10px;
+  overflow: hidden;
+  clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0 100%);
+  padding-left: 20px;
+  align-self: center;
+}
+.community-image {
+  background: url("image/2022-bathroom-trends-1920x1850.jpg") center/cover;
+  height: 50%;
+  width: 80%;
+}
+.community-content {
+  display: flex;
+  height: 100%;
+  padding: 64px 32px 0px 32px;
+  gap: 12px;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+}
+.community-descrpiton {
+  display: flex;
+  gap: 64px;
+  width: 100%;
+  justify-content: space-between;
+}
+.community-descrpiton p {
+  color: #3a5369;
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.footer {
+  background: url("image/bg-footer.jpg");
+  color: white;
+  padding: 50px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-column h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ff0000;
+  display: inline-block;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+}
+
+.license-info {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.division-text {
+  font-size: 14px;
+  color: #ccc;
+  margin: 10px 0;
+}
 @media (max-width: 768px) {
   .mid {
     flex-direction: column;
