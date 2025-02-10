@@ -68,7 +68,7 @@ body {
 }
 
 .hero {
-  height: 100vh;
+  height: 100%;
   background: url("image/2022-bathroom-trends-1920x1850.jpg") center/cover;
   position: relative;
   display: flex;
@@ -1048,21 +1048,306 @@ p {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 768px) {
-  .mid {
+/* Tablet Styles (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 15px 20px;
+  }
+  .hero {
+    height: 720px;
+    display: flex;
     flex-direction: column;
-    background: #fff;
+    align-items: start;
+    justify-content: center;
+    gap: 0px;
+    margin-bottom: 20px;
+  }
+  .form-overlay {
+    min-height: fit-content;
+    background: var(--color-primary);
+    padding: 4%;
+    color: white;
+    width: fit-content;
+  }
+  .form-title {
+    font-size: 1.2rem;
+    margin-bottom: 1%;
+    text-align: center;
+  }
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+  }
+  .form-subtitle {
+    text-align: center;
+    margin-bottom: 5%;
+    color: #ccc;
   }
 
-  .mid-image {
-    min-height: 300px;
+  .form-group {
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-
-  .mid-content {
-    padding: 2rem;
-  }
-
-  .mid-title {
+  .hero-title {
     font-size: 2rem;
+    width: 80%;
+    max-width: 380px;
+    line-height: 1.2;
+  }
+
+  .nav {
+    gap: 15px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 15px;
+  }
+
+  .mid,
+  .solutions,
+  .steps,
+  .financing,
+  .maximize,
+  .community,
+  .family {
+    grid-template-columns: 1fr;
+    height: auto;
+    clip-path: none;
+  }
+
+  .mid-image,
+  .solutions-image,
+  .steps-image,
+  .financing-image,
+  .maximize-image,
+  .family-image {
+    display: none;
+  }
+  .customers {
+    display: flex;
+    flex-direction: column;
+    clip-path: none;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 24px 0px;
+  }
+  .customers-content .customers-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .companies {
+    width: 100%;
+  }
+  .mid-content,
+  .solutions-content,
+  .steps-content,
+  .financing-content,
+  .maximize-content {
+    padding: 40px 20px;
+  }
+
+  .customers-content {
+    padding: 0 20px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .company-rating {
+    padding: 0 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .companies {
+    padding: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 20px;
+  }
+
+  .promo-circle {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin: 20px auto;
+  }
+
+  .diagonal-content {
+    flex-direction: column;
+  }
+
+  .text-section {
+    width: 100%;
+  }
+
+  .image-section {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* Mobile Styles (up to 767px) */
+@media screen and (max-width: 767px) {
+  .top-banner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero {
+    height: fit-content;
+  }
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .form-overlay {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .steps-description {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .customers-rating {
+    flex-direction: column;
+  }
+
+  .customers-rating .rating {
+    width: 100%;
+  }
+
+  .solution-options {
+    flex-direction: column;
+  }
+
+  .solution-contents {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .maximize-content {
+    text-align: left;
+  }
+
+  .maximize-title {
+    font-size: 1.8rem;
+  }
+
+  .family-description {
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  /* Additional mobile-specific adjustments */
+  .social-icons {
+    justify-content: center;
+  }
+
+  .license-info {
+    text-align: center;
+  }
+
+  .galleries {
+    clip-path: none;
+    padding-top: 40px;
+  }
+
+  .galleries .header {
+    padding: 0 20px;
+  }
+
+  .galleries .header .header-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+}
+
+/* Additional Shared Responsive Styles */
+.mid-image::after,
+.steps-image::after,
+.financing-image::after,
+.maximize-image::after,
+.family-image::after {
+  @media screen and (max-width: 1024px) {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      #fff 100%
+    );
+  }
+}
+
+/* Improve Touch Targets for Mobile */
+@media screen and (max-width: 767px) {
+  .nav-link,
+  .footer-column ul li a,
+  .form-button,
+  .social-icons a {
+    padding: 12px;
+    display: inline-block;
+  }
+
+  input,
+  button,
+  select,
+  textarea {
+    font-size: 16px; /* Prevent zoom on focus in iOS */
   }
 }
